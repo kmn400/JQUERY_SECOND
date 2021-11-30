@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>jquer</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+        <style>
+           
+        </style>
+    </head>
+    <body>        
+        <form>
+        <table width=100%>
+            <tr>
+                <td>아이디 </td>
+                <td>
+                    <input type="email" id="id">
+                </td>
+            </tr>
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td>비밀번호 </td>
+                <td><input type="password" minlength="5" id="pw1"></td>
+            </tr>
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td>성별</td>
+                <td colspan="2">
+                    <input type="radio" name="sex" value="M"> 남자
+                    <input type="radio" name="sex" value="F"> 여자
+                </td>
+            </tr> 
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td>직업</td>
+                <td> 
+                    <select id='job'>
+                    <option></option>
+                    <option>프론트엔트</option>
+                    <option>백엔드</option>
+                    <option>데이터베이스</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td>취미</td>
+                <td colspan="3">
+                    <input type="checkbox" name="hobby" value="develop"> 개발
+                    <input type="checkbox" name="hobby" value="game"> 게임
+                    <input type="checkbox" name="hobby" value="fishing"> 낚시 
+                </td>
+            </tr> 
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td colspan="4">
+                    <input type="checkbox" name="hobby" value="develop"> 운동
+                    <input type="checkbox" name="hobby" value="game"> 독서
+                    <input type="checkbox" name="hobby" value="fishing"> 음악감상 
+                </td>
+            </tr> 
+            <tr>
+                <td> </td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td><input type="reset" value="취소"><input type="button" id='join' value="회원가입"></td>
+            </tr>
+        </table>
+        </form>
+    </body>
+    <script>
+        $(function(){
+            $('#join').click(function(){
+                if($('input:checkbox[name=hobby]:checked').length < 3){
+                    alert('취미를 체크해주세요');
+                    return;
+                } 
+                if($('input:radio[name=sex]:checked').length != 1) {
+                    alert('성별을 체크해주세요');
+                    return;
+                } 
+                if($("#job").val() < 3) {
+                    alert('직업을 체크해주세요');
+                    return;
+                } 
+                if($("#pw1").val().length < 5){
+                    alert('비밀번호를 체크해주세요');
+                    return;
+                } 
+                if($('#id').val().length < 1){
+                    alert('아이디를 체크해주세요');
+                    return;
+                }
+            });
+        });
+    </script>
+</html>
