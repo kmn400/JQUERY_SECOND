@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>jquer</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+        <style>
+           
+        </style>
+    </head>
+    <body>        
+        <form>
+        <table border = '1' width = '200' height = '20' >
+            <tr align = 'center'>
+                <td ><input type="checkbox" name="check1" id="all">확인</td>
+                <td>제목</td>
+                <td>글쓴시간</td>
+            </tr>     
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목1"></td>
+                <td>제목1</td>
+                <td>2</td>
+            </tr>     
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목2"></td>
+                <td>제목2</td>
+                <td>3</td>
+            </tr>  
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목3"></td>
+                <td>제목3</td>
+                <td>4</td>
+            </tr> 
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목4"></td>
+                <td>제목4</td>
+                <td>5</td>
+            </tr> 
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목5"></td>
+                <td>제목5</td>
+                <td>6</td>
+            </tr> 
+            <tr align = 'center'>
+                <td><input type="checkbox" class='total' name="check" value="제목6"></td>
+                <td>제목6</td>
+                <td>7</td>
+            </tr> 
+        </table>
+        </form>
+        <button id = 'log' name = 'leg'>로그</button>
+    </body>
+    <script>
+            $("#all").click(function(){
+                if($(this).is(":checked")){ 
+                    let count = $('input:checkbox[name=check]').prop('checked', true);
+                } else{ 
+                    let count = $('input:checkbox[name=check]').prop('checked', false);
+                }
+            });
+
+            $("#log").click(function(){
+                $(".total").each(
+                    function(){
+                    if($(this).is(':checked')){
+                        console.log($(this).val());
+                    }
+                }
+            )
+        });
+    </script>
+</html>
