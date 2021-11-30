@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>jquer</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+        </script>
+
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <input type='checkbox' name='mycheck' value='1'> 테스트1<br/>
+        <input type='checkbox' name='mycheck' value='2'> 테스트2<br/>
+        <input type='checkbox' name='mycheck' value='3'> 테스트3<br/>
+        <input type='checkbox' name='mycheck' value='4'> 테스트4<br/>
+        <input type='checkbox' name='mycheck' value='5'> 테스트5<br/>
+        <input type='checkbox' name='mycheck' value='6'> 테스트6<br/>
+        
+        <button id = 'btn1'>전체갯수</button>
+        <button id = 'btn2'>체크된 갯수</button>
+        <button id = 'btn3'>전체 체크하기</button>
+        <button id = 'btn4'>전체 체크해제</button>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                let count = $('input:checkbox[name=mycheck]').length;
+                alert('전체 갯수는' + count+'개 입니다.');
+            })
+            $('#btn2').click(function(){
+                let count = $('input:checkbox[name=mycheck]:checked').length;
+                alert('체크된 갯수는' + count+'개 입니다.');
+            })
+            $('#btn3').click(function(){
+                let count = $('input:checkbox[name=mycheck]').attr('checked', true);
+            })
+            $('#btn4').click(function(){
+                let count = $('input:checkbox[name=mycheck]').attr('checked', false);
+            })
+        });
+    </script>
+</html>
