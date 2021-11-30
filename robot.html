@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#1234").click(function(){
+        $("#a").animate({
+            height: '100px',
+            width: '100px',
+            top: '300px',
+            left: '300px',
+        });
+        $("#b").animate({
+            height: '50px',
+            width: '100px',
+            top: '300px',
+            left: '400px',
+        });
+        $("#c").animate({
+            height: '50px',
+            width: '100px',
+            top: '300px',
+            left: '200px',
+        });
+        $("#d").animate({
+            height: '100px',
+            width: '50px',
+            top: '400px',
+            left: '350px',
+        });
+        $("#e").animate({
+            height: '100px',
+            width: '50px',
+            top: '400px',
+            left: '300px',
+        });
+        $("#f").animate({
+            height: '50px',
+            width: '50px',
+            top: '250px',
+            left: '325px',
+        });
+    });    
+});
+</script> 
+</head>
+<body>
+
+<button id = '1234'>로봇 변신</button>
+
+<div id = 'a' style="background:#98bf21;height:50px;width:50px;top:150px;left:50px;position:absolute;"></div>
+<div id = 'b' style="background:#3b0f8d;height:50px;width:50px;top:50px;left:50px;position:absolute;"></div>
+<div id = 'c' style="background:#cc1616;height:50px;width:50px;top:100px;left:50px;position:absolute;"></div>
+<div id = 'd' style="background:#f1ee20;height:50px;width:50px;top:50px;left:0px;position:absolute;"></div>
+<div id = 'e' style="background:#f523a4;height:50px;width:50px;top:100px;left:0px;position:absolute;"></div>
+<div id = 'f' style="background:#86efef;width:50px;height:50px;top:150px;left:0px;border-radius:75px;position:absolute;"></div>
+
+</body>
+</html>

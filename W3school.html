@@ -6,10 +6,10 @@
 <script>
     $(document).ready(function(){
         $('#hide').click(function(){
-            $('p').hide();
+            $('p').hide(1000);
         });
         $('#show').click(function(){
-            $('p').show();
+            $('p').show(1000);
         });
         $('#fadeIn').click(function(){
             $('p').fadeIn(1000);
@@ -35,6 +35,9 @@
         $("btn3").click(function(){
             $("#div1").remove();
         });
+        $('#left').click(function(){
+            $('p').animate(left:'200px')
+        });
     });
 </script>
         <style>
@@ -51,11 +54,12 @@
         <button id='animate'>animate</button> 
         <button id='btn1'>btn1</button>
         <button id='btn2'>btn2</button>
-        <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+        <div id="div1">
             <p>텍스트 입니다.</p>
         </div>
         <img src="몬드리안1.jpg" alt="jQuery" width="100" height="140"><br><br>
         <button id='btn3'>Remove div element</button>
+        <button id='left'>left</button>
     </body>
     
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#1234").click(function(){
+    $("div").animate({
+        left: '250px',
+      height: '+=150px',
+      width: '+=150px'
+    });
+});    
+  $("#5678").click(function(){
+    $("div").animate({left: '250px'});
+    });
+});
+</script> 
+</head>
+<body>
+
+<button id = '1234'>Start Animation</button>
+<button id = '5678'>Start Animation</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
